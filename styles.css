@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.top, .bottom {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers items vertically in the container */
+    align-items: flex-start; /* aligns items to the start of the container */
+    padding-left: 1%; /* maintains the 1% left offset */
+}
+
+.top {
+    background-color: #99C3D6;
+}
+
+.bottom {
+    background-color: #6DB2C1;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+}
+
+nav ul li a {
+    position: relative;
+    padding: 16px 0 5px;
+    margin: 0 25px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px #2f4c58;
+}
+
+nav ul li a:hover {
+    color: #6DB2C1;
+    transition: .9s;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    -webkit-transform: translateX(-50%) scaleX(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-transition: transform 250ms;
+    transition: transform 250ms;
+}
+
+nav ul li a:hover:after {
+    -webkit-transform:translateX(-50%) scaleX(1);
+    transform:translateX(-50%) scaleX(1);
+}
+
+.top h4, .top h1, .bottom h1 {
+    margin: 0; /* removes the default margin */
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 4.39vw;
+    color: white;
+    position: absolute; /* change back to absolute */
+    left: 1%; /* maintains the 1% left offset */
+}
+
+.top h4 {
+    top: 37%; /* adjust as needed */
+    color: #6DB2C1;
+    font-size: 30px;
+}
+
+.top h1 {
+    top: 40%; /* adjust as needed */
+}
+
+.bottom h1 {
+    top: 51%; /* adjust as needed */
+}
