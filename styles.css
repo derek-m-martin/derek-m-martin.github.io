@@ -14,15 +14,37 @@ body {
     flex-direction: column;
 }
 
-.fullscreen-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
+.about-fullscreen-bg {
+    position: relative; /* Added */
     height: 100vh;
-    width: 100vw;
-    z-index: -1; /* Ensure the image stays behind your content */
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
+    text-align: center; /* Added */
+    background-image: url('grad1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
 }
 
+.about-fullscreen-bg h1 {
+    color: white;
+    font-size: 4em; /* Adjust as needed */
+    font-family: 'Fira Sans', sans-serif; /* This should match the font you used on your main page */
+}
+
+.about-fullscreen-cover-bg {
+    position: absolute; /* Added */
+    top: 0; /* Added */
+    left: 0; /* Added */
+    width: 100%; /* Added */
+    height: 100vh;
+    background-image: url('blackcover.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.85;
+    z-index: -1;
+}
 
 .top, .bottom {
     height: 50vh;
@@ -45,6 +67,7 @@ nav {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 10;
 }
 
 nav ul {
